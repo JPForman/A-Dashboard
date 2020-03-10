@@ -2,19 +2,13 @@ import React from 'react';
 import { groupVariables } from '../constants/reportVariables';
  
 function Bireport({ report, activeView, pageViewArray}) {
-
+  // configure the reportIds and report name in constants/reportVariables.js
   let urlString;
-
   // URL constants for Workspace in Power BI
   const groupId = groupVariables.Aflac.groupId;
   const autoAuth = groupVariables.Aflac.autoAuth;
   const ctid = groupVariables.Aflac.ctid;
   const config = groupVariables.Aflac.config;
-
-  // configure the reportIds and report name in constants/reportVariables.js
-  let report1 = groupVariables.Aflac.reportIds.b2b;
-  let report2 = groupVariables.Aflac.reportIds.b2c;
-  let report3 = groupVariables.Aflac.reportIds.agent;
 
   switch(activeView){
     case 'Business to Consumer':
@@ -41,7 +35,6 @@ function Bireport({ report, activeView, pageViewArray}) {
         justify-content: center;
         display: flex;
         align-items: center;
-      
         width: ${window.innerWidth}px;
         height: ${(window.innerHeight-50)}px;
         overflow-y: scroll;
