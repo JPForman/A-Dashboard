@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.js": "/static/js/main.2a4f123e.chunk.js",
+    "main.js.map": "/static/js/main.2a4f123e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.f956e8f5.js",
+    "runtime-main.js.map": "/static/js/runtime-main.f956e8f5.js.map",
+    "static/js/2.1e63e069.chunk.js": "/static/js/2.1e63e069.chunk.js",
+    "static/js/2.1e63e069.chunk.js.map": "/static/js/2.1e63e069.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.eb13bc69feb24117af6a0e5590300094.js": "/precache-manifest.eb13bc69feb24117af6a0e5590300094.js",
+    "service-worker.js": "/service-worker.js",
+    "static/js/2.1e63e069.chunk.js.LICENSE.txt": "/static/js/2.1e63e069.chunk.js.LICENSE.txt",
+    "static/media/aflaclogo.png": "/static/media/aflaclogo.ebe95f97.png",
+    "static/media/bc_duck_search.png": "/static/media/bc_duck_search.a57bc089.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f956e8f5.js",
+    "static/js/2.1e63e069.chunk.js",
+    "static/js/main.2a4f123e.chunk.js"
+  ]
+}
