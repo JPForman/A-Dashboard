@@ -1,10 +1,8 @@
 import React from 'react';
-import LoginPage from './LoginPage';
 import Card from './Card';
 import Bireport from './Bireport';
 
-function SplashPage({ setLoginStatus, loginStatus, activeView, setActiveView, pageViewArray, reportArray }) {
-  let loginJSX;
+function SplashPage({ activeView, setActiveView, pageViewArray, reportArray }) {
   let cardJSX;
   let iframeJSX;
 
@@ -33,12 +31,7 @@ function SplashPage({ setLoginStatus, loginStatus, activeView, setActiveView, pa
     }
   ];
 
-  if (!loginStatus) {
-    loginJSX = <LoginPage
-      loginStatus={loginStatus}
-      setLoginStatus={setLoginStatus}
-    />;
-  } else if (loginStatus=== true && activeView=== 'Default'){
+  if (activeView=== 'Default'){
     cardJSX = <div className='card-holder'>
 
       <Card
@@ -68,7 +61,7 @@ function SplashPage({ setLoginStatus, loginStatus, activeView, setActiveView, pa
       `}
       </style>
     </div>
-  } else if (loginStatus === true && activeView !== 'Default'){
+  } else if (activeView !== 'Default'){
     iframeJSX = <div className='frame-holder'>
       <Bireport
         report={reportList[0]}
@@ -87,7 +80,6 @@ function SplashPage({ setLoginStatus, loginStatus, activeView, setActiveView, pa
   }
   return (
     <div>
-      {loginJSX}
       {cardJSX}
       {iframeJSX}
     </div>
