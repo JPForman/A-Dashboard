@@ -5,7 +5,7 @@ import BackArrowImage from '../media/navigation_arrow_left.png'
 
 
 function NavBar({loginStatus, setLoginStatus, activeView, setActiveView, pageViewArray}){
-  let signedInJSX= null;
+  let signedInJSX= true;
   let buttonArray = [];
   let hideLogoSpan = (activeView !== 'Default') ? 'hide-logo-span' : '';
 
@@ -32,8 +32,8 @@ function NavBar({loginStatus, setLoginStatus, activeView, setActiveView, pageVie
     setLoginStatus(false);
     setActiveView('Default');
   }
-  if (loginStatus===true){
-    signedInJSX = <div className='sign-out-cluster'><button className='sign-out' onClick={signOut}>Sign Out</button></div>
+  if (signedInJSX===true){
+    signedInJSX = <div className='sign-out-cluster'><a href="/user/sign-out" className='sign-out'>Sign Out</a></div>
   }
   return (
     <div className='navigation-bar'>
