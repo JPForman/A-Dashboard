@@ -1,150 +1,64 @@
-// Dependencies for component
 import React from 'react';
-import AflacBrandImage from '../media/bc_duck_search.png'
-import BackArrowImage from '../media/navigation_arrow_left.png'
+import TheoremLogo from '../media/theoremlogo.png';
+import AflacLogo from '../media/aflaclogo.png';
 
-
-function NavBar({loginStatus, setLoginStatus, activeView, setActiveView, pageViewArray}){
-  let signedInJSX= true;
-  let buttonArray = [];
-  let hideLogoSpan = (activeView !== 'Default') ? 'hide-logo-span' : '';
-
-  if (activeView !=='Default'){
-    pageViewArray.forEach((viewName)=>{
-      let button;
-      if (viewName===activeView) {
-        button = <button className='nav-button active-view-button' >{viewName}</button>;
-      } else {
-        button = <button className='nav-button' onClick={() =>{changeView(viewName)}} className='nav-button' >{viewName}</button>;
-      }
-      buttonArray.push(button)
-    });
-    let backButton = <button className='nav-button' onClick={() => { changeView('Default') }} className='nav-button'><img src={BackArrowImage} alt="Back Arrow" class="left-arrow"></img>Back</button>
-    buttonArray.push(backButton);
-  } else {
-    buttonArray.push(null);
-  }
-  function changeView(entry){
-    setActiveView(entry);
-  }
-
-  const signOut = () => {
-    setLoginStatus(false);
-    setActiveView('Default');
-  }
-  if (signedInJSX===true){
-    signedInJSX = <div className='sign-out-cluster'><a href="/user/sign-out" className='sign-out'>Sign Out</a></div>
-  }
+function NavBar(){
   return (
-    <div className='navigation-bar'>
+    <div className='navbar'>
       <style>{`
-        .navigation-bar {
-          position: fixed;
-          top: 0px;
-          left: 0px;
-          width: 100%;
-          overflow: hidden;
-          z-index: 1;
-          font-family: 'Montserrat', sans-serif;
-          background-color: #ffffff;
-          transition: height 1s;
-        }
-        .navigation-buttons-span {
-          color: #00A5E6;
-          background-color: #fffffff;
-          width: 100%;
-          height: 50px;
-          display: flex;
-          justify-content: space-between;
-          overflow: hidden;
-        }
-        .navigation-bar-logo-span{
-          background-color: #00A5E6;
-          height: 100px;
-          width: 100%;
-          overflow:hidden;
-        }
-        .hide-logo-span {
-          height: 1px;
-        }
-        .nav-cluster {
-          display: flex;
-          flex-flow: row nowrap;
-          justify-content: flex-end;
-          margin-right:20px;
-        }
-
-        .nav-button {
-          color: #00A5E6;
-          border: solid 0px rgba(0,0,0,0);
-          background-color: rgba(255,255,255,1);
-          transition: background-color .2s;
-        }
-        .nav-button:hover {
-          background-color: #00A5E6;
+        body {
+          margin: 0px;
+          padding: 0px; }
+        
+        .navbar {
           color: #fff;
-        }
-        .nav-button:first-child {
-          width: 50px;
-          display: block;
-          background: #F89728;
-          color: #fff
-        }
-
-        .nav-button .left-arrow {
-          display: block;
-          width: 30px;
-          height: 30px;
-          background: url(/static/media/navigation_arrow_left.png) no-repeat contain;
-        }
-
-        .active-view-button{
-          background-color: #00A5E6;
-          color: white;
-        }
-
-        .sign-out-cluster{
-          display: flex;
-          flex-flow: row nowrap;
-          justify-content: flex-end;
-          width: 200px;
-        }
-        .login-status{
-          color: #F89728;
-          margin-top:auto;
-          margin-bottom:auto;
-        }
-        .sign-out {
-          background-color: #00A5E6;
-          color: rgba(255,255,255,1);
-          border: solid 0px rgba(0,0,0,0);
-          transition: background-color .2s;
-        }
-        .sign-out:hover{
-          background-color: rgba(250,250,250,1);
-          color: #00A5E6;
-        }
-        #aflac-brand-image{
-          display: block;
-          height: 200px;
-          width: auto;
-          margin: 10px -60px 0px;
-          float: right;
-        } 
+          width: 100%;
+          overflow: hidden;
+          height: 50px; }
+          .navbar-theorem {
+            height: 50px;
+            width: 15vw;
+            float: left; }
+            .navbar-theorem img {
+              height: 100%;
+              display: block;
+              margin: 0px auto; }
+          .navbar-spacer {
+            float: left;
+            color: #333;
+            font-size: 45px;
+            height: 50px; }
+          .navbar-aflac {
+            height: 50px;
+            width: 15vw;
+            float: left; }
+            .navbar-aflac img {
+              height: 70%;
+              display: block;
+              margin: 8px auto; }
+          .navbar-sign-out {
+            background: #00A5E6;
+            color: #fff;
+            padding: 18px;
+            float: right;
+            font-family: sans-serif;
+            text-decoration: none;
+            font-weight: bold;
+            height: 100%; }
+            .navbar-sign-out:hover {
+              text-decoration: underline; }           
       `}</style>
-      <div className='navigation-buttons-span'>
-        <div className='nav-cluster'>
-          {buttonArray[4]}
-          {buttonArray[0]}
-          {buttonArray[1]}
-          {buttonArray[2]}
-          {buttonArray[3]}
-        </div>
-        {signedInJSX}
+
+      <div className='navbar-theorem'>
+        <img className='sidenav-wrap-theorem' src={TheoremLogo} alt="Theorem Advertising Logo"></img>
       </div>
-      <div className={`navigation-bar-logo-span ${hideLogoSpan}`}>
-        <img src={AflacBrandImage} alt="Aflac Duck" id='aflac-brand-image'/>
+      <div className="navbar-spacer">|</div>
+      <div className='navbar-aflac'>
+        <img src={AflacLogo} alt="Aflac Logo"></img>
       </div>
+
+      <a href="/user/sign-out" className=' navbar-sign-out'>Sign Out</a>
+
     </div>
   );
 }

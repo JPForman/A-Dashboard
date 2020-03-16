@@ -1,0 +1,42 @@
+{
+    "@odata.context":"http://wabi-us-west2-redirect.analysis.windows.net/v1.0/myorg/groups/e28872e3-b32a-4143-baa6-cd2eda51e440/$metadata#reports",
+    
+    "value":[
+        {
+            "datasetId":"63b709f7-6a68-403c-a46a-17d745a33663",
+            "embedUrl":"https://app.powerbi.com/reportEmbed?reportId=3f9f7d24-72b6-4ea7-93d6-e6ac9c974bdf&groupId=e28872e3-b32a-4143-baa6-cd2eda51e440&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVVTLVdFU1QyLXJlZGlyZWN0LmFuYWx5c2lzLndpbmRvd3MubmV0IiwiZW1iZWRGZWF0dXJlcyI6eyJtb2Rlcm5FbWJlZCI6ZmFsc2V9fQ%3d%3d",
+            "id":"3f9f7d24-72b6-4ea7-93d6-e6ac9c974bdf",
+            "isOwnedByMe":true,
+            "name":"Twilio Summary",
+            "reportType":"PowerBIReport",
+            "webUrl":"https://app.powerbi.com/groups/e28872e3-b32a-4143-baa6-cd2eda51e440/reports/3f9f7d24-72b6-4ea7-93d6-e6ac9c974bdf"
+        },
+        {
+            "datasetId":"63b709f7-6a68-403c-a46a-17d745a33663",
+            "embedUrl":"https://app.powerbi.com/reportEmbed?reportId=3fcff4e4-dca4-4264-9df2-2ede5d788a0e&groupId=e28872e3-b32a-4143-baa6-cd2eda51e440&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVVTLVdFU1QyLXJlZGlyZWN0LmFuYWx5c2lzLndpbmRvd3MubmV0IiwiZW1iZWRGZWF0dXJlcyI6eyJtb2Rlcm5FbWJlZCI6ZmFsc2V9fQ%3d%3d",
+            "id":"3fcff4e4-dca4-4264-9df2-2ede5d788a0e",
+            "isOwnedByMe":true,
+            "name":"Auction Insights",
+            "reportType":"PowerBIReport",
+            "webUrl":"https://app.powerbi.com/groups/e28872e3-b32a-4143-baa6-cd2eda51e440/reports/3fcff4e4-dca4-4264-9df2-2ede5d788a0e"
+        },
+        {
+            "datasetId":"63b709f7-6a68-403c-a46a-17d745a33663",
+            "embedUrl":"https://app.powerbi.com/reportEmbed?reportId=5eb90b8e-2e24-4aa4-adfd-f27513483aa7&groupId=e28872e3-b32a-4143-baa6-cd2eda51e440&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVVTLVdFU1QyLXJlZGlyZWN0LmFuYWx5c2lzLndpbmRvd3MubmV0IiwiZW1iZWRGZWF0dXJlcyI6eyJtb2Rlcm5FbWJlZCI6ZmFsc2V9fQ%3d%3d",
+            "id":"5eb90b8e-2e24-4aa4-adfd-f27513483aa7",
+            "isOwnedByMe":true,
+            "name":"Facebook Detail",
+            "reportType":"PowerBIReport",
+            "webUrl":"https://app.powerbi.com/groups/e28872e3-b32a-4143-baa6-cd2eda51e440/reports/5eb90b8e-2e24-4aa4-adfd-f27513483aa7"
+        },
+        {
+            "datasetId":"63b709f7-6a68-403c-a46a-17d745a33663",
+            "embedUrl":"https://app.powerbi.com/reportEmbed?reportId=c1e40299-c95b-4a0a-8397-fb01558d2b13&groupId=e28872e3-b32a-4143-baa6-cd2eda51e440&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVVTLVdFU1QyLXJlZGlyZWN0LmFuYWx5c2lzLndpbmRvd3MubmV0IiwiZW1iZWRGZWF0dXJlcyI6eyJtb2Rlcm5FbWJlZCI6ZmFsc2V9fQ%3d%3d",
+            "id":"c1e40299-c95b-4a0a-8397-fb01558d2b13",
+            "isOwnedByMe":true,
+            "name":"Data Model - Dev v3",
+            "reportType":"PowerBIReport",
+            "webUrl":"https://app.powerbi.com/groups/e28872e3-b32a-4143-baa6-cd2eda51e440/reports/c1e40299-c95b-4a0a-8397-fb01558d2b13"
+        }
+    ]
+}
