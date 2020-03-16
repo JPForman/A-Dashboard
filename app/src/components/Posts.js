@@ -10,13 +10,12 @@ export default class ReportsAPI extends React.Component {
     };
     
     async componentDidMount() {
-        const url = "http://aflac-dashboard.herokuapp.com/api/reports"; // api url
+        const url = "https://aflac-dashboard.herokuapp.com/api/reports"; // api url
         const response = await fetch(url, {
             method: 'GET',
             headers : {
                 'Content-Type': 'application/json;charset=utf-8'
-            },
-            body: JSON.stringify(this.state)
+            }
         });
         const data = await response.json();
         this.setState({report: data.results[0], loading: false });
