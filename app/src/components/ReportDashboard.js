@@ -1,71 +1,45 @@
 import React from 'react';
-import { groupVariables } from '../constants/reportVariables';
-import $ from 'jquery';
-import ReportsAPI from './Posts'
+import { reportVariables } from '../constants/reportVariables.js'
+import B2CReport from './reports/B2CReport'
+import TwilioReport from './reports/TwilioReport'
+import AgentReport from './reports/AgentReport'
 
-function Reporting({ report, activeView, pageViewArray}) {
+function Reporting({ activeView }) {
   // configure the reportIds and report name in constants/reportVariables.js
-
-  // B2B Report Token JSON
-  let tokenData;
-
-  // function Token() {
-  //   $.getJSON(`/api/token/${groupVariables.Aflac.reportIds.b2b}`, function(tokenData) {
-  //     //data is the JSON string
-  //     console.log(tokenData);
-  //   });
-  // };
-
-  // Proof of concept for /api/token/<report ID>
-  // function ReportFeed() {
-  //   $.getJSON({
-  //     url: '/api/report',
-  //     success: function (report) {
-  //         var table = $("<table><tr><th>Report Name</th><th>Embed URL</th><th>Report ID</th></tr>");
-  //         var tr;
-  //         for (var i = 0; i < report.length; i++) {
-  //             tr = $("<tr>");
-  //             tr.append("<td>" + report[i].name + "</td>");
-  //             tr.append("<td>" + report[i].embedUrl + "</td>");
-  //             tr.append("<td>" + report[i].id + "</td>");
-  //             tr.append("</tr>");
-  //             table.append(tr);
-  //         }
-  //         table.append("</table>");
-  //         $("#jsonData").html(table);
-  //     }
-  //   });
-  // };
+  let reportData;
 
   switch(activeView){
-    case 'Business to Consumer':
-      tokenData = <ReportsAPI params={report}/>
-      break;
-    case 'Business to Business': 
-      tokenData = "http://www.youtube.com/embed/ZvQEHLA1o8M";
-      break;
-    case 'Agent':
-      // urlString = <Report 
-      //   embedType="report" // or "dashboard"
-      //   tokenType="Embed" // or "Aad"
-      //   accessToken="" // accessToken goes here
-      //   embedUrl="" // embedUrl goes here
-      //   embedId="" // Report or Dashboard ID goes here
-      //   permissions="All" // or "View"
-      //   style={myStyleObject}
-      // />;
-      break;
+    case 'B2C Performance':
+      reportData = <div>
+        <B2CReport
+          reportID = {reportVariables.reportIds.b2c}
+        />
+      </div>
+      break
+    case 'Twilio': 
+    reportData = <div>
+      <TwilioReport
+        reportID = {reportVariables.reportIds.twilio}
+      />
+    </div>
+      break
+    case 'Coordinated Auction Insights':
+      reportData = <div>
+        <AgentReport
+          reportID = {reportVariables.reportIds.agent}
+        />
+      </div>
+      break
     case 'A/B Testing':
-      tokenData = "http://www.youtube.com/embed/ZvQEHLA1o8M";
-      break;
+      reportData = <div>
+
+      </div>
     default: 
       break;
   }
 
-  
-
   return(
-    <div className='frameDiv'>  
+    <div className='frameDiv'>
       <style>{`
         .frameDiv{
           justify-content: center;
@@ -75,12 +49,19 @@ function Reporting({ report, activeView, pageViewArray}) {
           height: calc(100vh - 39px);
           background: #ccc;
         }
+        .frameDiv div {
+          width: 85vw;
+          height: calc(100vh - 50px);
+        }
+        .powerbi-frame {
+          height: 93.5vh;
+          position: fixed;
+          bottom: 0;
+        }
         `}
       </style>
-
-        {tokenData}
-  
+        {reportData}
     </div>
   ); 
 }
-export default Reporting;
+export default Reporting

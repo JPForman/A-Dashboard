@@ -1,13 +1,19 @@
 import React from 'react';
 
+// For selecting departments
 function Card({ data, image, setActiveView }) {
     
     function changeView(entry){
         setActiveView(entry);
     }
+    
+    // function changeView(entry){
+    //     midView(entry);
+    // }
+    
     return (
         <div onClick={()=>{changeView(data.header)}} className='card'>
-            <img className='card-icon' src={data.imageURL}></img>
+            <img className='card-icon' src={image}></img>
             <h1 className='card-title'>{data.header}</h1>
             <style>{`
                 .card {
@@ -22,6 +28,9 @@ function Card({ data, image, setActiveView }) {
                     justify-content: center;
                     margin: 15px 10px;
                     width: 45%; }
+                    .card-icon {
+                        height: 75px;
+                        margin: 0px auto;}
                     .card-title {
                       font-size: 24px;
                       text-align: center;

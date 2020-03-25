@@ -1,44 +1,45 @@
-import React from "react";
-import ReactDOM from 'react-dom';
+export default class ReportAccessToken extends React.Component {
 
-export default class ReportsAPI extends React.Component {
+    renderPowerbiReport({ reportID, embedURL, embedToken }) {
+
+        var config = {
+            accessToken: embedToken,
+            reportId: reportID,
+            groupId: groupID,
+            embedUrl: embedURL,
+            AuthenticationType: "MasterUser",
+            embedTokenType: "reports",
+            embedType: "report",
+            filterPaneEnabled: false,
+            navContentPaneEnabled: false,
+            height: "100vh",
+            width: "100%"
+        };
     
-
-    state = {
-        loading: true,
-        report: undefined
-    };
-    
-    async componentDidMount() {
-        const url = "http://aflac-dashboard.herokuapp.com/api/reports"; // api url
-        const response = await fetch(url, {
-            method: 'GET',
-            headers : {
-                'Content-Type': 'application/json;charset=utf-8'
-            },
-            body: JSON.stringify(this.state)
-        });
-        const data = await response.json();
-        this.setState({report: data.results[0], loading: false });
-
-        await new Promise((resolve, reject) => setTimeout(resolve, 5000));
-
-    };
-
-    render() {
-        return (
-            <div>
-                {this.state.loading || !this.state.report ? (
-                    <div>loading...</div>
-                ) : (
-                    <div>
-                        <div>{this.state.report.name}</div>
-                        <div>{this.state.report.id}</div>
-                        <div src={ this.state.report.embedUrl}></div>
-                        <img src={this.state.report.reportType} />
-                    </div>
-                )}
+        var PbiFailErrorMessage = (
+            <div className="App-link">
+            Oops! Looks like something went wrong!
             </div>
         );
-    }
-}
+    
+        var invalidConfigErrorMessage =  (
+            <div className="App-link">
+                Oops! Looks like something went wrong, <br /> Please contact{" "}
+                <a href="mailto:support@theoremadvertising.com?Subject=Aflac Dashboard: Error 500">
+                support@theoremadvertising.com
+                </a>
+            </div>
+        );
+    
+        return (
+            <div className="powerbi-wrapper">
+                <PowerBiEmbed 
+                    config={config} 
+                    PbiFailErrorMessage={PbiFailErrorMessage}
+                    invalidConfigErrorMessage = {invalidConfigErrorMessage}
+                    hideDefaultError = {false}
+                />
+            </div>
+        )
+    };
+};

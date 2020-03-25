@@ -1,11 +1,11 @@
 import React from 'react';
 import Card from './Card';
-import SideNav from './SidebarNav';
 import Report from './ReportDashboard';
 import GridHeader from './GridHeading';
+import SidebarNav from './SidebarNav';
 
 // Images
-import B2B from '../media/B2B.png';
+import Twilio from '../media/AB-Tests.png';
 import Agent from '../media/Agent.png';
 import B2C from '../media/B2C.png';
 import ABTest from '../media/AB-Tests.png';
@@ -18,22 +18,22 @@ function SplashPage({ activeView, setActiveView, pageViewArray, reportArray }) {
   const dataList = [
     {
       header: pageViewArray[0],
-      imageURL: {B2C},
+      imageURL: B2C,
       info: 'Business to Consumer Data'
     },
     {
       header: pageViewArray[1],
-      imageURL: {B2B},
-      info: 'Business to Business Data'
+      imageURL: Twilio,
+      info: 'Twilio Data'
     },
     {
       header: pageViewArray[2],
-      imageURL: {Agent},
+      imageURL: Agent,
       info: 'Agent Data'
     },
     {
       header: pageViewArray[3],
-      imageURL: {ABTest},
+      imageURL: ABTest,
       info: 'A/B Testing Data'
     }
   ];
@@ -84,10 +84,10 @@ function SplashPage({ activeView, setActiveView, pageViewArray, reportArray }) {
     </div>
   } else if (activeView !== 'Default'){
     iframeJSX = <div className='frame-holder'>
-      <SideNav
-        activeView= {activeView}
-        setActiveView = {setActiveView}
-        pageViewArray = {pageViewArray}
+      <SidebarNav
+        activeView={activeView}
+        setActiveView={setActiveView}
+        pageViewArray={pageViewArray}
       />
       <Report
         report={reportList[0]}
@@ -95,19 +95,21 @@ function SplashPage({ activeView, setActiveView, pageViewArray, reportArray }) {
       />
       <style>
         {`
-        .frame-holder {
-          
+        #root {
+          height: 100vh;
+          width: 100vw;
+          overflow: hidden;
         }
         `}
       </style>
       </div>
   }
   return (
-    <div>
-      {pageHeading}
-      {cardJSX}
-      {iframeJSX}
-    </div>
+  <div>
+    {pageHeading}
+    {cardJSX}
+    {iframeJSX}
+  </div>
   );
 }
 export default SplashPage;

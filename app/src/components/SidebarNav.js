@@ -1,9 +1,5 @@
-// Dependencies for component
 import React from 'react';
-import TheoremLogo from '../media/theoremlogo.png';
-import AflacLogo from '../media/aflaclogo.png';
 import BackArrowImage from '../media/navigation_arrow_left.png';
-
 
 function SideNav({activeView, setActiveView, pageViewArray}){
   let signedInJSX= true;
