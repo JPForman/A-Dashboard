@@ -1,29 +1,26 @@
 import React from 'react';
 import NavBar from './components/Navbar';
 import SplashPage from './components/SplashPage';
-import {reportVariables} from './constants/reportVariables'
 
 function App() {
   const [activeView, setActiveView] = React.useState('Default');
-  const pageViewArray = ['B2C Performance', 'Twilio', 'Coordinated Auction Insights', 'A/B Testing']
+  const pageViewArray = ['B2C Performance', 'Twilio', 'Coordinated Auction Insights', 'Get a Quote', 'Click to Call Sticky Footer', 'One Step Form - Retest', 'Submit to Request a Quote', 'B2A One Step']
   const reportArray = ['Bi testing']
 
   return (    
-    <div>
+    <React.Fragment>
       <NavBar       
         activeView = {activeView}
         setActiveView = {setActiveView}
         pageViewArray= {pageViewArray}
       />
-      <div className='display-space'>
-        <SplashPage
-          activeView={activeView}
-          setActiveView={setActiveView}
-          pageViewArray= {pageViewArray}
-          reportArray={reportArray}
-        />
-      </div>
-    </div>
+      <SplashPage
+        activeView={activeView}
+        setActiveView={setActiveView}
+        pageViewArray= {pageViewArray}
+        reportArray={reportArray}
+      />
+    </React.Fragment>
   );
 }
 

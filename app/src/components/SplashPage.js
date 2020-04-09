@@ -3,7 +3,6 @@ import Card from './Card';
 import Report from './ReportDashboard';
 import GridHeader from './GridHeading';
 import SidebarNav from './SidebarNav';
-
 // Images
 import Twilio from '../media/AB-Tests.png';
 import Agent from '../media/Agent.png';
@@ -34,7 +33,27 @@ function SplashPage({ activeView, setActiveView, pageViewArray, reportArray }) {
     {
       header: pageViewArray[3],
       imageURL: ABTest,
-      info: 'A/B Testing Data'
+      info: 'Get a Quote Data'
+    },
+    {
+      header: pageViewArray[4],
+      imageURL: ABTest,
+      info: 'Click to Call Sticky Footer'
+    },
+    {
+      header: pageViewArray[5],
+      imageURL: ABTest,
+      info: 'One Step Form - Retest'
+    },
+    {
+      header: pageViewArray[6],
+      imageURL: ABTest,
+      info: 'Submit to Request a Quote'
+    },
+    {
+      header: pageViewArray[7],
+      imageURL: ABTest,
+      info: 'B2A One Step'
     }
   ];
 
@@ -50,35 +69,90 @@ function SplashPage({ activeView, setActiveView, pageViewArray, reportArray }) {
       setActiveView={setActiveView}
     />
     cardJSX =
-    <div className='card-holder'>  
-      <Card
-        data={dataList[0]}
-        image={dataList[0].imageURL}
-        setActiveView={setActiveView}
-      />
-      <Card
-        data={dataList[1]}
-        image={dataList[1].imageURL}
-        setActiveView={setActiveView}
-      />
-      <Card
-        data={dataList[2]}
-        image={dataList[2].imageURL}
-        setActiveView={setActiveView}
-      />
-      <Card
-        data={dataList[3]}
-        image={dataList[3].imageURL}
-        setActiveView={setActiveView}
-      />
+    <div className='reports'>
+      <h1>Business Reports</h1>
+      <div className="reports-business">
+        <Card
+          data={dataList[0]}
+          image={dataList[0].imageURL}
+          setActiveView={setActiveView}
+        />
+        <Card
+          data={dataList[1]}
+          image={dataList[1].imageURL}
+          setActiveView={setActiveView}
+        />
+        <Card
+          data={dataList[2]}
+          image={dataList[2].imageURL}
+          setActiveView={setActiveView}
+        />
+      </div>
+      <h1>A/B Test Reports</h1>
+      <div className="reports-abTests">
+        <Card
+          data={dataList[3]}
+          image={dataList[3].imageURL}
+          setActiveView={setActiveView}
+        />
+        <Card
+          data={dataList[4]}
+          image={dataList[4].imageURL}
+          setActiveView={setActiveView}
+        />
+        <Card
+          data={dataList[5]}
+          image={dataList[5].imageURL}
+          setActiveView={setActiveView}
+        />
+        <Card
+          data={dataList[6]}
+          image={dataList[6].imageURL}
+          setActiveView={setActiveView}
+        />
+        <Card
+          data={dataList[7]}
+          image={dataList[7].imageURL}
+          setActiveView={setActiveView}
+        />
+      </div>
       <style>
         {` 
-          .card-holder {
-            display: flex;
-            flex-wrap: wrap;
-            max-width: 700px;
+          .reports {
+            max-width: 900px;
             margin: 0px auto;
           }
+          .reports h1 {
+            width: 100%;
+            font-family: sans-serif;
+          }
+          .reports-business {
+            display:flex;
+          }
+          .reports-business .card, .reports-abTests .card {
+            width: 30%;
+            border: 1px solid #00A5E6;
+            font-family: 'Montserrat', sans-serif;
+            overflow: hidden;
+            transition: all .2s ease-in-out;
+            height: 200px;
+            background: #00A5E6;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 15px 10px;
+            float:left;
+          }
+          .card-icon {
+              height: 75px;
+              margin: 0px auto;}
+          .card-title {
+            font-size: 24px;
+            text-align: center;
+            color: #fff; }
+          .card:hover {
+            box-shadow: 0 5px 10px #0068A7;
+            transform: scale(1.05); }
       `}
       </style>
     </div>
@@ -98,18 +172,17 @@ function SplashPage({ activeView, setActiveView, pageViewArray, reportArray }) {
         #root {
           height: 100vh;
           width: 100vw;
-          overflow: hidden;
         }
         `}
       </style>
       </div>
   }
   return (
-  <div>
+  <React.Fragment>
     {pageHeading}
     {cardJSX}
     {iframeJSX}
-  </div>
+  </React.Fragment>
   );
 }
 export default SplashPage;

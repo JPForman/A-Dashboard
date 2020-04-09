@@ -20,7 +20,7 @@ function B2CReport() {
     }
 
     return (
-    <div>  
+    <React.Fragment>  
         <PowerbiEmbedded
             id={reportID}
             embedUrl={`https://app.powerbi.com/reportEmbed?reportId=${reportID}&groupId=${groupID}&config=${config}`}
@@ -31,7 +31,7 @@ function B2CReport() {
             tokenType={`Embed`}
             permissions={`All`}
         />
-    </div> 
+    </React.Fragment> 
 )};
 
 

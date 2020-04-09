@@ -34,36 +34,51 @@ function SideNav({activeView, setActiveView, pageViewArray}){
           color: #fff;
           width: 15vw;
           float: left;
-          padding-top: 30px;}
+          padding-top: 15px;}
           .sidenav-links {
             display: flex;
             flex-direction: column; }
             .sidenav-links .nav-button {
-              height: 50px;
               font-size: 15px;
               color: black;
-              text-align: center;
+              text-align: left;
               font-family: sans-serif;
-              line-height: 50px; }
+              padding: 10px 10px 10px 30px; }
               .sidenav-links .nav-button img.left-arrow {
-                height: 25px;
+                height: 20px;
                 float: left;
-                margin: 10px -40px 10px 25px; }
+                margin: -2px 15px 0px -10px; }
               .sidenav-links .nav-button.active-view-button {
                 color: #F88C00;
                 font-weight: bold; }
               .sidenav-links .nav-button:hover {
                 text-decoration: underline; }
+        .sidenav-links h3 {
+          color: #333;
+          font-family: sans-serif;
+          padding-left: 15px;
+          border-bottom: 1px solid rgba(0,0,0,0.2);
+        }
+        .startDate, .endDate {
+          width: 50%;
+          float: left;
+        }
          
       `}
       </style>
      
       <div className='sidenav-links'>
-        {buttonArray[4]}
+        {buttonArray[8]}
+        <h3>Reports</h3>
         {buttonArray[0]}
         {buttonArray[1]}
         {buttonArray[2]}
+        <h3>A/B Tests</h3>
         {buttonArray[3]}
+        {buttonArray[4]}
+        {buttonArray[5]}
+        {buttonArray[6]}
+        {buttonArray[7]}
       </div>
     </div>
    
