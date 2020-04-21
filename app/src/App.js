@@ -14,6 +14,7 @@ function App() {
         setActiveView = {setActiveView}
         pageViewArray= {pageViewArray}
       />
+      
       <SplashPage
         activeView={activeView}
         setActiveView={setActiveView}
