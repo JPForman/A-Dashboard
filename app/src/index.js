@@ -1,6 +1,7 @@
 // React dependencies
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { HashRouter } from 'react-router-dom';
 
 // Calling upon components
 import App from './App';
