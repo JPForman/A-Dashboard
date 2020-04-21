@@ -3,6 +3,11 @@ import NavBar from './components/NavBar';
 import SplashPage from './components/SplashPage';
 import {Switch, Route, Link } from 'react-router-dom';
 import B2AOneStep from './components/ab-tests/b2a-one-step';
+import GetAQuote from './components/ab-tests/get-a-quote';
+import OneStepForm from './components/ab-tests/one-step-form-retest';
+import AgentReport from './components/reports/AgentReport';
+import TwilioReport from './components/reports/TwilioReport';
+import B2CReport from './components/reports/B2CReport';
 
 function App() {
   const [activeView, setActiveView] = React.useState('Default');
@@ -18,7 +23,11 @@ function App() {
       />
 
       <Switch>
-        <Route exact path="/feedback" render={()=><FeedbackSubmit onFeedbackSubmission={this.handleAddingNewFeedback}/>}/>
+        <Route exact path='/' render={()=><SplashPage 
+            activeView={activeView}
+            setActiveView={setActiveView}
+            pageViewArray= {pageViewArray}
+            reportArray={reportArray}/>}/>
 
         <Route exact path='/b2aOneStep' render={()=><B2AOneStep />}/>
         <Route exact path='/getAQuote' render={()=><GetAQuote />}/>
@@ -26,12 +35,7 @@ function App() {
         <Route exact path='/agentReport' render={()=><AgentReport />}/>
         <Route exact path='/twilioReport' render={()=><TwilioReport />}/>
         <Route exact path='/b2cReport' render={()=><B2CReport />}/>
-        <Route exact path='/splashPage' render={()=><SplashPage 
-          activeView={activeView}
-          setActiveView={setActiveView}
-          pageViewArray= {pageViewArray}
-          reportArray={reportArray}/>}/>
-        />
+
 
       </Switch>
 
