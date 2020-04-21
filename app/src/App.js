@@ -1,7 +1,7 @@
 import React from 'react';
+import {Switch, Route, Link } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import SplashPage from './components/SplashPage';
-import {Switch, Route, Link } from 'react-router-dom';
 import B2AOneStep from './components/ab-tests/b2a-one-step';
 import GetAQuote from './components/ab-tests/get-a-quote';
 import OneStepForm from './components/ab-tests/one-step-form-retest';
@@ -15,7 +15,7 @@ function App() {
   const reportArray = ['Bi testing']
 
   return (    
-    <React.Fragment>
+    <div>
       <NavBar       
         activeView = {activeView}
         setActiveView = {setActiveView}
@@ -24,10 +24,10 @@ function App() {
 
       <Switch>
         <Route exact path='/' render={()=><SplashPage 
-            activeView={activeView}
-            setActiveView={setActiveView}
-            pageViewArray= {pageViewArray}
-            reportArray={reportArray}/>}/>
+          activeView={activeView}
+          setActiveView={setActiveView}
+          pageViewArray= {pageViewArray}
+          reportArray={reportArray}/>}/>
 
         <Route exact path='/b2aOneStep' render={()=><B2AOneStep />}/>
         <Route exact path='/getAQuote' render={()=><GetAQuote />}/>
@@ -39,7 +39,7 @@ function App() {
 
       </Switch>
 
-    </React.Fragment>
+    </div>
   );
 }
 
