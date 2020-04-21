@@ -184,52 +184,62 @@ function SplashPage({ activeView, setActiveView, pageViewArray, reportArray }) {
     <div className='reports'>
       <h1>Business Reports</h1>
       <div className="reports-business">
-        <Link to='/b2cReport' className='splashLink'>
+        <Link to='/b2cReport'>
           <Card
             data={dataList[0]}
             image={dataList[0].imageURL}
+          />
+        </Link>
+        <Link to='/twilioReport'>
+          <Card
+            data={dataList[1]}
+            image={dataList[1].imageURL}
+          />
+        </Link>
+        <Link to='/agentReport'>
+          <Card
+            data={dataList[2]}
+            image={dataList[2].imageURL}
             setActiveView={setActiveView}
           />
         </Link>
-        <Card
-          data={dataList[1]}
-          image={dataList[1].imageURL}
-          setActiveView={setActiveView}
-        />
-        <Card
-          data={dataList[2]}
-          image={dataList[2].imageURL}
-          setActiveView={setActiveView}
-        />
       </div>
       <h1>A/B Test Reports</h1>
       <div className="reports-abTests">
-        <Card
-          data={dataList[3]}
-          image={dataList[3].imageURL}
-          setActiveView={setActiveView}
-        />
-        <Card
-          data={dataList[4]}
-          image={dataList[4].imageURL}
-          setActiveView={setActiveView}
-        />
-        <Card
-          data={dataList[5]}
-          image={dataList[5].imageURL}
-          setActiveView={setActiveView}
-        />
-        <Card
-          data={dataList[6]}
-          image={dataList[6].imageURL}
-          setActiveView={setActiveView}
-        />
-        <Link to='/b2aOneStep' className='splashLink'>
+        <Link to='/getAQuote'>
           <Card
-            data={dataList[7]}
-            image={dataList[7].imageURL}
+            data={dataList[3]}
+            image={dataList[3].imageURL}
             setActiveView={setActiveView}
           />
+        </Link>
+        <Link to='/clickToCall'>
+          <Card
+            data={dataList[4]}
+            image={dataList[4].imageURL}
+            setActiveView={setActiveView}
+          />
+        </Link>
+        <Link to='/oneStepForm'>
+          <Card
+            data={dataList[5]}
+            image={dataList[5].imageURL}
+            setActiveView={setActiveView}
+          />
+        </Link>
+        <Link to='/b2aOneStep'>
+          <Card
+            data={dataList[6]}
+            image={dataList[6].imageURL}
+            setActiveView={setActiveView}
+          />
+        </Link>
+        <Link to='/b2aOneStep'>
+            <Card
+              data={dataList[7]}
+              image={dataList[7].imageURL}
+              setActiveView={setActiveView}
+            />
         </Link>
       </div>
       <style>

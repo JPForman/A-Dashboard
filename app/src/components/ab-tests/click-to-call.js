@@ -52,7 +52,7 @@ const data = {
 
 
 
-function OneStepForm({title, description, startDate, endDate, cvr, statSig, dateOfStatSig}) {
+function ClickToCall({title, description, startDate, endDate, cvr, statSig, dateOfStatSig}) {
 
     return (
     <React.Fragment>
@@ -150,4 +150,4 @@ function OneStepForm({title, description, startDate, endDate, cvr, statSig, date
 )};
 
 
-export default OneStepForm;
+export default ClickToCall;
