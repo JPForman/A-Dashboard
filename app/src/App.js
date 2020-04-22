@@ -14,6 +14,7 @@ import B2CReport from './components/reports/B2CReport';
 import ClickToCall from './components/ab-tests/click-to-call';
 import RequestAQuote from './components/ab-tests/submit-to-request-quote';
 import SidebarNav from './components/SidebarNav';
+import Error404 from './components/Error404';
 
 function App() {
   const [activeView, setActiveView] = React.useState('Default');
@@ -49,7 +50,7 @@ function App() {
         <Route exact path='/oneStepForm' render={()=><OneStepForm />}/>
         <Route exact path='/submitToRequestAQuote' render={()=><RequestAQuote />}/>
         <Route exact path='/b2aOneStep' render={()=><B2AOneStep />}/>
-
+        <Route component={Error404} />
       </Switch>
 
     </div>
