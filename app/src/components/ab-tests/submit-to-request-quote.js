@@ -50,10 +50,11 @@ const options = {
     maintainAspectRatio: false	// Don't maintain w/h ratio
 }
 
-function RequestAQuote({title, description, startDate, endDate, cvr, statSig, dateOfStatSig}) {
+function RequestAQuote({title, description, startDate, endDate, cvr, statSig, dateOfStatSig, setSidebarNavDisplay}) {
 
     return (
         <React.Fragment>
+        {setSidebarNavDisplay('block')}
         <div className="report-details">
             <h1>{title}</h1>
             <p>{description}</p>

@@ -10,7 +10,7 @@ import Agent from '../media/Agent.png';
 import B2C from '../media/B2C.png';
 import ABTest from '../media/AB-Tests.png';
 
-function SplashPage({ activeView, setActiveView, pageViewArray, reportArray }) {
+function SplashPage({ activeView, setActiveView, pageViewArray, setSidebarNavDisplay, reportArray }) {
   let pageHeading;
   let cardJSX;
   let iframeJSX;
@@ -67,6 +67,7 @@ function SplashPage({ activeView, setActiveView, pageViewArray, reportArray }) {
 
   return (
   <div>
+    {setSidebarNavDisplay('None')}
     <GridHeading />
     <div className='reports'>
       <h1>Business Reports</h1>

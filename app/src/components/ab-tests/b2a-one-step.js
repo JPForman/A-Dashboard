@@ -48,10 +48,11 @@ const data = {
 
 
 
-function B2AOneStep({title, description, startDate, endDate, cvr, statSig, dateOfStatSig}) {
+function B2AOneStep({title, description, startDate, endDate, cvr, statSig, dateOfStatSig, setSidebarNavDisplay}) {
 
     return (
     <React.Fragment>
+        {setSidebarNavDisplay('block')}
         <h1>{title}</h1>
         <p>{description}</p>
         <h3>Start Date</h3>

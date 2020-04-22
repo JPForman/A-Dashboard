@@ -2,7 +2,8 @@ import React, {useEffect, useState} from 'react';
 import PowerbiEmbedded from 'react-powerbi'
 import { reportVariables } from '../../constants/reportVariables'
 
-function B2CReport() {
+function B2CReport({setSidebarNavDisplay}) {
+    
     // creates an array of the reportData
     const reportID = reportVariables.reportIds.b2c;
     const [reports, setReportData] = useState([]);
@@ -21,6 +22,7 @@ function B2CReport() {
 
     return (
     <React.Fragment>  
+        {setSidebarNavDisplay('block')}
         <PowerbiEmbedded
             id={reportID}
             embedUrl={`https://app.powerbi.com/reportEmbed?reportId=${reportID}&groupId=${groupID}&config=${config}`}

@@ -52,10 +52,11 @@ const options = {
 
 
 
-function OneStepForm({title, description, startDate, endDate, cvr, statSig, dateOfStatSig}) {
+function OneStepForm({title, description, startDate, endDate, cvr, statSig, dateOfStatSig, setSidebarNavDisplay}) {
 
     return (
     <React.Fragment>
+        {setSidebarNavDisplay('block')}
         <div className="report-details">
             <h1>{title}</h1>
             <p>{description}</p>
