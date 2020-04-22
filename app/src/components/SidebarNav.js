@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import BackArrowImage from '../media/navigation_arrow_left.png';
 
 function SidebarNav({activeView, setActiveView, pageViewArray}){
   let signedInJSX= true;
   let buttonArray = [];
 
-  if (activeView !=='Default'){
+  if (activeView){
     pageViewArray.forEach((viewName)=>{
       let button;
       if (viewName===activeView) {
@@ -15,7 +16,7 @@ function SidebarNav({activeView, setActiveView, pageViewArray}){
       }
       buttonArray.push(button)
     });
-    let backButton = <a className='nav-button' onClick={() => { changeView('Default') }} className='nav-button'><img src={BackArrowImage} alt="Back Arrow" className="left-arrow"></img>Dashboard</a>
+    let backButton = <Link to='/' className='nav-button' onClick={() => { changeView('Default') }} className='nav-button'><img src={BackArrowImage} alt="Back Arrow" className="left-arrow"></img>Dashboard</Link>
     buttonArray.push(backButton);
   } else {
     buttonArray.push(null);
@@ -70,15 +71,15 @@ function SidebarNav({activeView, setActiveView, pageViewArray}){
       <div className='sidenav-links'>
         {buttonArray[8]}
         <h3>Reports</h3>
-        {buttonArray[0]}
-        {buttonArray[1]}
-        {buttonArray[2]}
+        <Link to='b2cReport' className='nav-button'>B2C Performance</Link>
+        <Link to='twilioReport' className='nav-button'>Twillio</Link>
+        <Link to='agentReport' className='nav-button'>Coordinated Aucion Insights</Link>
         <h3>A/B Tests</h3>
-        {buttonArray[3]}
-        {buttonArray[4]}
-        {buttonArray[5]}
-        {buttonArray[6]}
-        {buttonArray[7]}
+        <Link to='getAQuote' className='nav-button'>Get a Quote</Link>
+        <Link to='clickToCall' className='nav-button'>Click to Call Sticky Footer</Link>
+        <Link to='oneStepForm' className='nav-button'>One Step Form - Retest</Link>
+        <Link to='submitToRequestAQuote' className='nav-button'>Submit to Request a Quote</Link>
+        <Link to='b2aOneStep' className='nav-button'>B2A One Step</Link>
       </div>
     </div>
    
