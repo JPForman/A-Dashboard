@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import PowerbiEmbedded from 'react-powerbi'
 import { reportVariables } from '../../constants/reportVariables'
 
-function TwilioReport() {
+function B2CReport() {
     // creates an array of the reportData
     const reportID = reportVariables.reportIds.b2c;
     const [reports, setReportData] = useState([]);
@@ -35,4 +35,4 @@ function TwilioReport() {
 )};
 
 
-export default TwilioReport;
+export default B2CReport;

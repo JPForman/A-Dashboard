@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Card from './Card';
 import Report from './ReportDashboard';
-import GridHeader from './GridHeading';
+import GridHeading from './GridHeading';
 import SidebarNav from './SidebarNav';
 // Images
 import Twilio from '../media/AB-Tests.png';
@@ -66,7 +66,7 @@ function SplashPage({ activeView, setActiveView, pageViewArray, reportArray }) {
 
   if (activeView=== 'Default'){
     pageHeading =
-    <GridHeader
+    <GridHeading
       setActiveView={setActiveView}
     />
     cardJSX =
@@ -181,6 +181,7 @@ function SplashPage({ activeView, setActiveView, pageViewArray, reportArray }) {
 
   return (
   <div>
+    <GridHeading />
     <div className='reports'>
       <h1>Business Reports</h1>
       <div className="reports-business">

@@ -1,5 +1,8 @@
+// Imported Dependancies
 import React from 'react';
 import {Switch, Route, Link } from 'react-router-dom';
+
+// Imported Components
 import NavBar from './components/NavBar';
 import SplashPage from './components/SplashPage';
 import B2AOneStep from './components/ab-tests/b2a-one-step';
@@ -10,6 +13,7 @@ import TwilioReport from './components/reports/TwilioReport';
 import B2CReport from './components/reports/B2CReport';
 import ClickToCall from './components/ab-tests/click-to-call';
 import RequestAQuote from './components/ab-tests/submit-to-request-quote';
+import SidebarNav from './components/SidebarNav';
 
 function App() {
   const [activeView, setActiveView] = React.useState('Default');
@@ -22,6 +26,12 @@ function App() {
         activeView = {activeView}
         setActiveView = {setActiveView}
         pageViewArray= {pageViewArray}
+      />
+
+      <SidebarNav
+        activeView={activeView}
+        setActiveView={setActiveView}
+        pageViewArray={pageViewArray}
       />
 
       <Switch>

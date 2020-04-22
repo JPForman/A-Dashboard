@@ -1,7 +1,7 @@
 import React from 'react';
 import BackArrowImage from '../media/navigation_arrow_left.png';
 
-function SideNav({activeView, setActiveView, pageViewArray}){
+function SidebarNav({activeView, setActiveView, pageViewArray}){
   let signedInJSX= true;
   let buttonArray = [];
 
@@ -85,4 +85,4 @@ function SideNav({activeView, setActiveView, pageViewArray}){
   );
 }
 
-export default SideNav;
+export default SidebarNav;
