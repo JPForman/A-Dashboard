@@ -22,7 +22,7 @@ import * as serviceWorker from './serviceWorker';
 */}
 
 ReactDOM.render(
-  <HashRouter>
+  <HashRouter >
     <App />
   </HashRouter>, 
   document.getElementById('root'));

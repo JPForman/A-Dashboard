@@ -21,7 +21,7 @@ function App() {
   const pageViewArray = ['B2C Performance', 'Twilio', 'Coordinated Auction Insights', 'Get a Quote', 'Click to Call Sticky Footer', 'One Step Form - Retest', 'Submit to Request a Quote', 'B2A One Step']
   const reportArray = ['Bi testing']
 
-  // Hook to set display of Side Nav Bar
+  // Hook to set display of Sidebar Nav 
   const [sidebarNavDisplay, setSidebarNavDisplay] = React.useState('block');
 
   return (    
@@ -49,26 +49,32 @@ function App() {
           reportArray={reportArray}/>}/>
 
         <Route exact path='/b2cReport' render={()=><B2CReport 
-        setSidebarNavDisplay= {setSidebarNavDisplay}
-        activeView = {activeView}/>}/>
+          setSidebarNavDisplay= {setSidebarNavDisplay}
+          activeView = {activeView}/>}/>
 
-        <Route exact path='/twilioReport' render={()=><TwilioReport setSidebarNavDisplay= {setSidebarNavDisplay}/>}/>
+        <Route exact path='/twilioReport' render={()=><TwilioReport 
+          setSidebarNavDisplay= {setSidebarNavDisplay}/>}/>
 
         <Route exact path='/agentReport' render={()=><AgentReport 
-        setSidebarNavDisplay= {setSidebarNavDisplay}/>}/>
+          setSidebarNavDisplay= {setSidebarNavDisplay}/>}/>
 
         <Route exact path='/getAQuote' render={()=><GetAQuote 
-        setSidebarNavDisplay= {setSidebarNavDisplay}/>}/>
+         setSidebarNavDisplay= {setSidebarNavDisplay}/>}/>
 
-        <Route exact path='/clickToCall' render={()=><ClickToCall setSidebarNavDisplay= {setSidebarNavDisplay}/>}/>
+        <Route exact path='/clickToCall' render={()=><ClickToCall 
+          setSidebarNavDisplay= {setSidebarNavDisplay}/>}/>
 
-        <Route exact path='/oneStepForm' render={()=><OneStepForm setSidebarNavDisplay= {setSidebarNavDisplay}/>}/>
+        <Route exact path='/oneStepForm' render={()=><OneStepForm 
+          setSidebarNavDisplay= {setSidebarNavDisplay}/>}/>
 
-        <Route exact path='/submitToRequestAQuote' render={()=><RequestAQuote setSidebarNavDisplay= {setSidebarNavDisplay}/>}/>
+        <Route exact path='/submitToRequestAQuote' render={()=><RequestAQuote 
+          setSidebarNavDisplay= {setSidebarNavDisplay}/>}/>
 
-        <Route exact path='/b2aOneStep' render={()=><B2AOneStep setSidebarNavDisplay= {setSidebarNavDisplay}/>}/>
+        <Route exact path='/b2aOneStep' render={()=><B2AOneStep 
+          setSidebarNavDisplay= {setSidebarNavDisplay}/>}/>
 
-        <Route render={()=> <Error404 setSidebarNavDisplay= {setSidebarNavDisplay} />}/>
+        <Route render={()=> <Error404 
+          setSidebarNavDisplay= {setSidebarNavDisplay} />}/>
       </Switch>
 
     </div>
