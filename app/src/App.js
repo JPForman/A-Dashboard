@@ -22,8 +22,8 @@ import { testVariables } from './constants/abTestVariables'
 
 function App() {
   const [activeView, setActiveView] = React.useState('Default');
-  const pageViewArray = ['B2C Performance', 'Twilio', 'Coordinated Auction Insights', 'Get a Quote', 'Click to Call Sticky Footer', 'One Step Form - Retest', 'Submit to Request a Quote', 'B2A One Step']
-  const reportArray = ['Bi testing']
+  const pageViewArray = ['B2C Performance', 'Twilio', 'Coordinated Auction Insights', 'Get a Quote', 'Click to Call Sticky Footer', 'One Step Form - Retest', 'Submit to Request a Quote', 'B2A One Step'];
+  const reportArray = ['Bi testing'];
 
   // Hook to set display of Sidebar Nav 
   const [sidebarNavDisplay, setSidebarNavDisplay] = React.useState('block');

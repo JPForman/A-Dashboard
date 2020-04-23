@@ -1,16 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Card from './Card';
-import Report from './ReportDashboard';
 import GridHeading from './GridHeading';
-import SidebarNav from './SidebarNav';
+
 // Images
 import Twilio from '../media/AB-Tests.png';
 import Agent from '../media/Agent.png';
 import B2C from '../media/B2C.png';
 import ABTest from '../media/AB-Tests.png';
 
-function SplashPage({ activeView, setActiveView, pageViewArray, setSidebarNavDisplay, reportArray }) {
+function SplashPage({ setActiveView, pageViewArray, setSidebarNavDisplay, reportArray }) {
 
   const dataList = [
     {
