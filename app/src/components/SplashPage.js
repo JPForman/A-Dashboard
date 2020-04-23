@@ -54,13 +54,7 @@ function SplashPage({ setActiveView, pageViewArray, setSidebarNavDisplay, report
     }
   ];
 
-  const reportList = [
-    {
-      screen: reportArray[0]  
-    }
-  ];
   
-
   return (
   <div>
     {setSidebarNavDisplay('None')}

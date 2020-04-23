@@ -16,7 +16,7 @@ import RequestAQuote from './components/ab-tests/submit-to-request-quote';
 import SidebarNav from './components/SidebarNav';
 import Error404 from './components/Error404';
 
-// Data constants
+// Test and Report Data
 import { reportVariables } from './constants/reportVariables.js'
 import { testVariables } from './constants/abTestVariables'
 
