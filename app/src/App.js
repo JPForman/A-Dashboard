@@ -21,6 +21,7 @@ function App() {
   const pageViewArray = ['B2C Performance', 'Twilio', 'Coordinated Auction Insights', 'Get a Quote', 'Click to Call Sticky Footer', 'One Step Form - Retest', 'Submit to Request a Quote', 'B2A One Step']
   const reportArray = ['Bi testing']
 
+  // Hook to set display of Side Nav Bar
   const [sidebarNavDisplay, setSidebarNavDisplay] = React.useState('block');
 
   return (    
@@ -39,7 +40,7 @@ function App() {
         />
       </div>
 
-      <Switch>
+      <Switch >
         <Route exact path='/' render={()=><SplashPage 
           activeView={activeView}
           setActiveView={setActiveView}
