@@ -8,11 +8,9 @@ import Twilio from '../media/AB-Tests.png';
 import Agent from '../media/Agent.png';
 import B2C from '../media/B2C.png';
 import ABTest from '../media/AB-Tests.png';
-import masterABTestList from '../constants/abTestList';
+import masterABTestList from '../constants/masterABTestList';
 
 function SplashPage({ setActiveView, pageViewArray, setSidebarNavDisplay }) {
-
-  const testURL = masterABTestList[0].splashImgUrl
 
   const dataList = [
     {
@@ -32,7 +30,6 @@ function SplashPage({ setActiveView, pageViewArray, setSidebarNavDisplay }) {
     },
     {
       header: pageViewArray[3],
-      imageURL: testURL,
       info: 'Get a Quote Data'
     },
     {
@@ -85,7 +82,7 @@ function SplashPage({ setActiveView, pageViewArray, setSidebarNavDisplay }) {
           />
         </Link>
       </div>
-      
+
       <h1>A/B Test Reports</h1>
       <div className="reports-abTests">
 

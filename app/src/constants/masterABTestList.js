@@ -1,5 +1,5 @@
 //imported images for splash page buttons
-import ABTest from '../media/AB-Tests.png';
+import ABTestIcon from '../media/AB-Tests.png';
 
 //Key Test Info - alphabetical by title
 const masterABTestList = [
@@ -14,7 +14,7 @@ const masterABTestList = [
     statSig:"",
     dateOfStatSig:"2020-03-04",
     reportID: '',
-    splashImgUrl: ABTest, //import at top
+    splashImgUrl: ABTestIcon, //import at top
   },
   {
     title: 'Click to Call Sticky Footer',
@@ -27,7 +27,7 @@ const masterABTestList = [
     statSig:"",
     dateOfStatSig:"2020-03-04",
     reportID: '',
-    splashImgUrl: ABTest,
+    splashImgUrl: ABTestIcon,
   },
   {
     title: 'Get a Quote CTA',
@@ -40,7 +40,7 @@ const masterABTestList = [
     statSig:"",
     dateOfStatSig:"2020-03-04",
     reportID: '',
-    splashImgUrl: ABTest, 
+    splashImgUrl: ABTestIcon, 
   },
   {
     title: 'One Step Form - Retest',
@@ -53,7 +53,7 @@ const masterABTestList = [
     statSig:"",
     dateOfStatSig:"2020-03-04",
     reportID: '',
-    splashImgUrl: ABTest, 
+    splashImgUrl: ABTestIcon, 
   },
   {
     title: 'Submit to Request a Quote',
@@ -66,7 +66,7 @@ const masterABTestList = [
     statSig:"",
     dateOfStatSig:"2020-03-04",
     reportID: '',
-    splashImgUrl: ABTest, 
+    splashImgUrl: ABTestIcon, 
   }
 ]
 
