@@ -31,11 +31,7 @@ function App() {
 
   return (    
     <div>
-      <NavBar       
-        activeView = {activeView}
-        setActiveView = {setActiveView}
-        pageViewArray= {pageViewArray}
-      />
+      <NavBar />
 
       <div style={{display: `${sidebarNavDisplay}`}}>
         <SidebarNav

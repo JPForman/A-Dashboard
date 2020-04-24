@@ -1,34 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import BackArrowImage from '../media/navigation_arrow_left.png';
+import masterBusinessReportsList from '../constants/masterBusinessReportsList';
+import masterABTestList from '../constants/masterABTestList';
 
-function SidebarNav({activeView, setActiveView, pageViewArray}){
-  let signedInJSX= true;
-  let buttonArray = [];
+function SidebarNav(){
 
-  if (activeView){
-    pageViewArray.forEach((viewName)=>{
-      let button;
-      if (viewName===activeView) {
-        button = <a className='nav-button active-view-button' >{viewName}</a>;
-      } else {
-        button = <a className='nav-button' onClick={() =>{changeView(viewName)}} className='nav-button' >{viewName}</a>;
-      }
-      buttonArray.push(button)
-    });
-    let backButton = <Link to='/' className='nav-button' onClick={() => { changeView('Default') }} className='nav-button'><img src={BackArrowImage} alt="Back Arrow" className="left-arrow"></img>Dashboard</Link>
-    buttonArray.push(backButton);
-  } else {
-    buttonArray.push(null);
-  }
-  function changeView(entry){
-    setActiveView(entry);
-  }
-  if (signedInJSX===true){
-    signedInJSX = <div className='sign-out-cluster'><a href="/user/sign-out" className='sign-out'>Sign Out</a></div>
-  }
   return (
     <div className='sidenav'>
+       <div className='sidenav-links'>
+        <Link to='/' className='nav-button' className='nav-button'><img src={BackArrowImage} alt="Back Arrow" className="left-arrow"></img>Dashboard</Link>
+        
+        <h3>Reports</h3>
+        {masterBusinessReportsList.map((test, index) => (
+          <Link to={test.lowerCamelCaseRouteTitle} className='nav-button'>{test.title}</Link>
+        ))}
+
+        <h3>A/B Tests</h3>
+        {masterABTestList.map((test, index) => (
+          <Link to={test.lowerCamelCaseRouteTitle} className='nav-button'>{test.title}</Link>
+        ))}
+
+      </div>
+
       <style>
       {`
         .sidenav {
@@ -67,20 +61,6 @@ function SidebarNav({activeView, setActiveView, pageViewArray}){
          
       `}
       </style>
-     
-      <div className='sidenav-links'>
-        {buttonArray[8]}
-        <h3>Reports</h3>
-        <Link to='b2cReport' className='nav-button'>B2C Performance</Link>
-        <Link to='twilioReport' className='nav-button'>Twillio</Link>
-        <Link to='agentReport' className='nav-button'>Coordinated Aucion Insights</Link>
-        <h3>A/B Tests</h3>
-        <Link to='getAQuote' className='nav-button'>Get a Quote</Link>
-        <Link to='clickToCall' className='nav-button'>Click to Call Sticky Footer</Link>
-        <Link to='oneStepForm' className='nav-button'>One Step Form - Retest</Link>
-        <Link to='submitToRequestAQuote' className='nav-button'>Submit to Request a Quote</Link>
-        <Link to='b2aOneStep' className='nav-button'>B2A One Step</Link>
-      </div>
     </div>
    
   );
