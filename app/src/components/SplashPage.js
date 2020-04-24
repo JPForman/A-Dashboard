@@ -8,8 +8,11 @@ import Twilio from '../media/AB-Tests.png';
 import Agent from '../media/Agent.png';
 import B2C from '../media/B2C.png';
 import ABTest from '../media/AB-Tests.png';
+import masterABTestList from '../constants/abTestList';
 
-function SplashPage({ setActiveView, pageViewArray, setSidebarNavDisplay, reportArray }) {
+function SplashPage({ setActiveView, pageViewArray, setSidebarNavDisplay }) {
+
+  const testURL = masterABTestList[0].splashImgUrl
 
   const dataList = [
     {
@@ -29,7 +32,7 @@ function SplashPage({ setActiveView, pageViewArray, setSidebarNavDisplay, report
     },
     {
       header: pageViewArray[3],
-      imageURL: ABTest,
+      imageURL: testURL,
       info: 'Get a Quote Data'
     },
     {
@@ -82,43 +85,20 @@ function SplashPage({ setActiveView, pageViewArray, setSidebarNavDisplay, report
           />
         </Link>
       </div>
+      
       <h1>A/B Test Reports</h1>
       <div className="reports-abTests">
-        <Link to='/getAQuote' className='link'>
-          <Card
-            data={dataList[3]}
-            image={dataList[3].imageURL}
-            setActiveView={setActiveView}
-          />
-        </Link>
-        <Link to='/clickToCall' className='link'>
-          <Card
-            data={dataList[4]}
-            image={dataList[4].imageURL}
-            setActiveView={setActiveView}
-          />
-        </Link>
-        <Link to='/oneStepForm' className='link'>
-          <Card
-            data={dataList[5]}
-            image={dataList[5].imageURL}
-            setActiveView={setActiveView}
-          />
-        </Link>
-        <Link to='/submitToRequestAQuote' className='link'>
-          <Card
-            data={dataList[6]}
-            image={dataList[6].imageURL}
-            setActiveView={setActiveView}
-          />
-        </Link>
-        <Link to='/b2aOneStep' className='link'>
+
+        {masterABTestList.map((test, index) => (
+          <Link to={test.lowerCamelCaseRouteTitle} className='link'>
             <Card
-              data={dataList[7]}
-              image={dataList[7].imageURL}
-              setActiveView={setActiveView}
+              title={test.title}
+              image={test.splashImgUrl}
             />
-        </Link>
+          </Link>
+        ))}
+
+       
       </div>
       <style>
         {` 
