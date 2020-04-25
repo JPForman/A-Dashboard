@@ -16,6 +16,10 @@ import RequestAQuote from './components/ab-tests/submit-to-request-quote';
 import SidebarNav from './components/SidebarNav';
 import Error404 from './components/Error404';
 
+// Reports List
+import masterABTestList from './constants/masterABTestList';
+import masterBusinessReportsList from './constants/masterBusinessReportsList';
+
 // Test and Report Data
 import { reportVariables } from './constants/reportVariables.js'
 import { testVariables } from './constants/abTestVariables'
@@ -34,43 +38,33 @@ function App() {
       <NavBar />
 
       <div style={{display: `${sidebarNavDisplay}`}}>
-        <SidebarNav
-          activeView={activeView}
-          setActiveView={setActiveView}
-          pageViewArray={pageViewArray}
-        />
+        <SidebarNav />
       </div>
       
       <Switch >
         <Route exact path='/' render={()=><SplashPage 
-          activeView={activeView}
-          setActiveView={setActiveView}
-          pageViewArray= {pageViewArray}
-          setSidebarNavDisplay= {setSidebarNavDisplay}
-          reportArray={reportArray}/>}/>
+          setSidebarNavDisplay= {setSidebarNavDisplay}/>}/>
+
 
         <Route exact path='/b2cReport' render={()=><B2CReport 
-          setSidebarNavDisplay= {setSidebarNavDisplay}
-          reportID = {reportVariables.reportIds.b2c}
-          activeView = {activeView}/>}/>
+          setSidebarNavDisplay= {setSidebarNavDisplay} 
+          report = {masterBusinessReportsList.find(({ title }) => title === 'B2C Performance')}
+          />}/>
 
         <Route exact path='/twilioReport' render={()=><TwilioReport 
-          reportID = {reportVariables.reportIds.twilio}
-          setSidebarNavDisplay= {setSidebarNavDisplay}/>}/>
+          setSidebarNavDisplay= {setSidebarNavDisplay} 
+          report = {masterBusinessReportsList.find(({ title }) => title === 'Twilio')}
+          />}/>
 
         <Route exact path='/agentReport' render={()=><AgentReport 
-          reportID = {reportVariables.reportIds.agent}
-          setSidebarNavDisplay= {setSidebarNavDisplay}/>}/>
+          setSidebarNavDisplay= {setSidebarNavDisplay} 
+          report = {masterBusinessReportsList.find(({ title }) => title === 'Coordinated Auction Insights')}
+          />}/>
 
         <Route exact path='/getAQuote' render={()=><GetAQuote 
-          title = {testVariables.report1.title}
-          description = {testVariables.report1.description}
-          startDate = {testVariables.report1.startDate}
-          endDate = {testVariables.report1.endDate}
-          cvr = {testVariables.report1.cvr}
-          statSig = {testVariables.report1.statSig}
-          dateOfStatSig = {testVariables.report1.dateOfStatSig}
-          setSidebarNavDisplay= {setSidebarNavDisplay}/>}/>
+          setSidebarNavDisplay= {setSidebarNavDisplay} 
+          report = {masterABTestList.find(({ title }) => title === 'Get a Quote CTA')}
+          />}/>
 
         <Route exact path='/clickToCall' render={()=><ClickToCall 
           title = {testVariables.report2.title}
@@ -121,3 +115,13 @@ function App() {
 }
 
 export default App;
+
+
+// attempting loop for routes
+
+// {masterBusinessReportsList.map((test, index) => (
+//   <Route exact path={'/' + test.lowerCamelCaseRouteTitle} 
+//     component={test.componentExport}
+//     setSidebarNavDisplay= {setSidebarNavDisplay} 
+//     report = {masterBusinessReportsList.find(({ title }) => title === test.title )} 
+//     />))}

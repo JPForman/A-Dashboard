@@ -2,9 +2,11 @@ import React, {useEffect, useState} from 'react';
 import PowerbiEmbedded from 'react-powerbi'
 import { reportVariables } from '../../constants/reportVariables'
 
-function TwilioReport({setSidebarNavDisplay}) {
+function TwilioReport({setSidebarNavDisplay, report}) {
+    console.log('report in twilio= ', report)
+    
     // creates an array of the reportData
-    const reportID = reportVariables.reportIds.twilio;
+    const reportID = report.reportID;
     const [reports, setReportData] = useState([]);
     const groupID = `e28872e3-b32a-4143-baa6-cd2eda51e440`;
     const config = `eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVVTLVdFU1QyLXJlZGlyZWN0LmFuYWx5c2lzLndpbmRvd3MubmV0IiwiZW1iZWRGZWF0dXJlcyI6eyJtb2Rlcm5FbWJlZCI6ZmFsc2V9fQ%3d%3d`;
@@ -21,6 +23,7 @@ function TwilioReport({setSidebarNavDisplay}) {
 
     return (
     <React.Fragment>  
+        hi
         {setSidebarNavDisplay('block')}
         <PowerbiEmbedded
             id={reportID}

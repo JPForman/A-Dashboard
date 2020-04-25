@@ -125,7 +125,12 @@ const data = {
     ]
 };
 
-function GetAQuote({title, description, startDate, endDate, cvr, statSig, dateOfStatSig, setSidebarNavDisplay}) {
+function GetAQuote({report, setSidebarNavDisplay}) {
+    const title = report.title;
+    const description = report.description;
+    const startDate = report.startDate;
+    const endDate = report.endDate;
+
 
     return (
     
