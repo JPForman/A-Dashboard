@@ -1,6 +1,6 @@
 // Imported Dependancies
 import React from 'react';
-import {Switch, Route, Link } from 'react-router-dom';
+import {Switch, Route } from 'react-router-dom';
 
 // Imported Components
 import NavBar from './components/NavBar';
@@ -47,7 +47,6 @@ function App() {
           report = {masterBusinessReportsList.find(({ title }) => title === test.title )} 
           />}/>))}
 
-
         <Route exact path='/getAQuote' render={()=><GetAQuote 
           setSidebarNavDisplay= {setSidebarNavDisplay} 
           report = {masterABTestList.find(({ title }) => title === 'Get a Quote CTA')}
@@ -73,6 +72,7 @@ function App() {
           report = {masterABTestList.find(({ title }) => title === 'B2A One Step')}
           />}/>
 
+
         <Route render={()=> <Error404 
           setSidebarNavDisplay= {setSidebarNavDisplay} />}/>
       </Switch>
@@ -84,29 +84,9 @@ function App() {
 export default App;
 
 
-// attempting loop for routes
-
-// {masterBusinessReportsList.map((test, index) => (
+// {masterABTestList.map((test, index) => (
 //   <Route exact path={'/' + test.lowerCamelCaseRouteTitle}
-//     render={()=><ReportTemplate
-//     setSidebarNavDisplay= {setSidebarNavDisplay} 
-//     report = {masterBusinessReportsList.find(({ title }) => title === test.title )} 
-//     />}/>))}
-
-
-
-
-// <Route exact path='/b2cReport' render={()=><ReportTemplate 
+//   render={()=><test.componentExport
 //   setSidebarNavDisplay= {setSidebarNavDisplay} 
-//   report = {masterBusinessReportsList.find(({ title }) => title === 'B2C Performance')}
-//   />}/>
-
-// <Route exact path='/twilioReport' render={()=><ReportTemplate 
-//   setSidebarNavDisplay= {setSidebarNavDisplay} 
-//   report = {masterBusinessReportsList.find(({ title }) => title === 'Twilio')}
-//   />}/>
-
-// <Route exact path='/agentReport' render={()=><ReportTemplate 
-//   setSidebarNavDisplay= {setSidebarNavDisplay} 
-//   report = {masterBusinessReportsList.find(({ title }) => title === 'Coordinated Auction Insights')}
-//   />}/>
+//   report = {masterBusinessReportsList.find(({ title }) => title === test.title )} 
+//   />}/>))}
