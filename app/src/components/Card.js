@@ -1,7 +1,7 @@
 import React from 'react';
 
 // For selecting departments
-function Card({ title, image, setActiveView }) {
+function Card({ title, image }) {
     
     return (
         <div className='card'>

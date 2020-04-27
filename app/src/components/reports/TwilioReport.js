@@ -23,7 +23,6 @@ function TwilioReport({setSidebarNavDisplay, report}) {
 
     return (
     <React.Fragment>  
-        hi
         {setSidebarNavDisplay('block')}
         <PowerbiEmbedded
             id={reportID}

@@ -44,6 +44,7 @@ const masterBusinessReportsList = [
     reportID: '7f625067-0766-4027-9bd6-5464a7e8203a',
     splashImgUrl: TwilioIcon, 
   },
+  
 ]
 
 export default masterBusinessReportsList;

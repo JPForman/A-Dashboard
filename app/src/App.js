@@ -20,6 +20,9 @@ import Error404 from './components/Error404';
 import masterABTestList from './constants/masterABTestList';
 import masterBusinessReportsList from './constants/masterBusinessReportsList';
 
+// Styles
+import './scss/_reportDash.scss'
+
 // Test and Report Data
 import { reportVariables } from './constants/reportVariables.js'
 import { testVariables } from './constants/abTestVariables'
@@ -44,7 +47,6 @@ function App() {
       <Switch >
         <Route exact path='/' render={()=><SplashPage 
           setSidebarNavDisplay= {setSidebarNavDisplay}/>}/>
-
 
         <Route exact path='/b2cReport' render={()=><B2CReport 
           setSidebarNavDisplay= {setSidebarNavDisplay} 

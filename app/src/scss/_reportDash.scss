@@ -1,0 +1,193 @@
+#moblie-nav{
+  visibility: hidden;
+}
+
+
+
+.frameDiv{
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  background: #ccc;
+  overflow: scroll;
+  font-family: sans-serif;
+}
+@media (min-width: 850px) and (orientation : portrait) {
+.frameDiv > div {
+  width: inherit;
+  overflow: scroll;
+}
+}
+
+.powerbi-frame {
+  height: 93.5vh;
+  position: fixed;
+  bottom: 0;
+}
+.report-details {
+  background: #fff;
+  margin: 15px 7.5px 15px 15px;
+  padding: 15px;
+  width: 45%;
+  float: left;
+}
+.pie-chart {
+  width: calc(100vw - 65vw);
+  background: #fff;
+  margin :15px 7.5px;
+  padding: 15px;
+  float: left;
+}
+
+.report-details h1 {
+  margin: 0px;
+}
+
+.report-details div h3, .report-details div p {
+  margin: 0px;
+}
+
+.line-chart {
+  margin: 0px 15px;
+  background: #fff;
+}
+
+.VWO {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 98.5%;
+  margin-left: 15px;
+}
+
+
+.VWO .line-chart {
+  margin: 0px 15px 0px 0px;
+  width: 100%;
+  float: left;
+}
+
+
+
+.VWO .line-chart h3 {
+  margin: 0px;
+  background: #7c7c7c;
+  color: #fff;
+  padding: 6px 0px;
+  text-align: center;
+}
+
+.GA {
+  margin: 15px 15px;
+  overflow: hidden;
+  width: auto;
+}
+
+.GA .line-chart {
+  margin: 0px;
+}
+
+.GA .line-chart h3 {
+  margin: 0px;
+  background: #7c7c7c;
+  color: #fff;
+  padding: 6px 0px;
+  text-align: center;
+}
+
+.thumbnails div img {
+  height: 100px;
+  width: 150px;
+}
+
+.thumbnails > div {
+  float: left;
+  margin: 66px 15px 0px;
+}
+
+.thumbnails div p {
+  margin: 0px 0px 5px;
+}
+
+@media (max-width: 1100px){
+
+  .GA{
+    overflow: visible;
+    margin: 0px;
+    display: block;
+    float: left;
+    width: 100%;
+
+  }
+
+  .GA .chartjs-size-monitor .chartjs-render-monitor .line-chart{
+    height: 70%;
+  }
+
+  .VWO .line-chart{
+    // margin-top: 10px;
+    margin-bottom: 10px;
+    float: left;
+  }
+
+  .frame-holder{
+    margin: 0%;
+    padding: 0%;
+  }
+  .frameDiv{
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    background: #fff;
+  }
+
+  .VWO{
+    width: 100%;
+    display: block;
+    margin: 0%;
+  }
+
+  .chartjs-size-monitor{
+    height: 40%;
+  }
+
+  .chartjs-render-monitor{
+    width:100%;
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  .chartjs-size-monitor{
+    width: 100%;
+    height: 70%;
+    padding: 0%;
+    margin: 0%;
+  }
+
+  .line-chart{
+    width: 100%;
+    align: center;
+    height: 70%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .sidenav, .report-details, .thumbnails{
+    display: none;
+  }
+
+  #moblie-nav{
+    color: #fff;
+    visibility: visible;
+    font-size: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #39A5E6;
+    width: 100%;
+    height: 10%;
+    text-align: center;
+
+    overflow: hidden;
+  }
+
+}
