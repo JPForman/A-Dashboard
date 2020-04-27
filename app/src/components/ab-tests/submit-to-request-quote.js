@@ -50,7 +50,15 @@ const options = {
     maintainAspectRatio: false	// Don't maintain w/h ratio
 }
 
-function RequestAQuote({title, description, startDate, endDate, cvr, statSig, dateOfStatSig, setSidebarNavDisplay}) {
+function RequestAQuote({report, setSidebarNavDisplay}) {
+
+    const title = report.title
+    const description = report.description
+    const startDate = report.startDate
+    const endDate = report.endDate
+    const cvr = report.cvr
+    const statSig = report.statSig
+    const dateOfStatSig = report.dateOfStatSig
 
     return (
         <React.Fragment>

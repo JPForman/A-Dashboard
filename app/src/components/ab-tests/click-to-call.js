@@ -1,6 +1,8 @@
 import React from 'react';
 import {Pie, Doughnut, Line } from 'react-chartjs-2'
 
+
+
 const state = {
     labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
     datasets: [
@@ -52,8 +54,16 @@ const data = {
 
 
 
-function ClickToCall({title, description, startDate, endDate, cvr, statSig, dateOfStatSig, setSidebarNavDisplay}) {
+function ClickToCall({report, setSidebarNavDisplay}) {
 
+    const title = report.title
+    const description = report.description
+    const startDate = report.startDate
+    const endDate = report.endDate
+    const cvr = report.cvr
+    const statSig = report.statSig
+    const dateOfStatSig = report.dateOfStatSig
+    
     return (
     <React.Fragment>
         {setSidebarNavDisplay('block')}

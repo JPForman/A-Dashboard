@@ -126,10 +126,13 @@ const data = {
 };
 
 function GetAQuote({report, setSidebarNavDisplay}) {
-    const title = report.title;
-    const description = report.description;
-    const startDate = report.startDate;
-    const endDate = report.endDate;
+    const title = report.title
+    const description = report.description
+    const startDate = report.startDate
+    const endDate = report.endDate
+    const cvr = report.cvr
+    const statSig = report.statSig
+    const dateOfStatSig = report.dateOfStatSig
 
 
     return (
