@@ -48,3 +48,20 @@ const masterBusinessReportsList = [
 ]
 
 export default masterBusinessReportsList;
+
+
+// Template for adding a new report
+
+// {
+//   title: '',
+//   lowerCamelCaseRouteTitle: '',
+//   componentExport: '', 
+//   description:"",
+//   startDate:"",
+//   endDate:"",
+//   cvr:"",
+//   statSig:"",
+//   dateOfStatSig:"",
+//   reportID: '',
+//   splashImgUrl: , 
+// },

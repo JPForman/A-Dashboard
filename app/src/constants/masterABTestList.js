@@ -71,3 +71,21 @@ const masterABTestList = [
 ]
 
 export default masterABTestList;
+
+
+
+// Template for adding a new test
+
+// {
+//   title: '',
+//   lowerCamelCaseRouteTitle: '',
+//   componentExport: '', 
+//   description:"",
+//   startDate:"",
+//   endDate:"",
+//   cvr:"",
+//   statSig:"",
+//   dateOfStatSig:"",
+//   reportID: '',
+//   splashImgUrl: , 
+// },
