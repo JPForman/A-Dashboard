@@ -6,7 +6,7 @@
 (picture of dashboard goes here)
 
 #### _This is an application for viewing analysis reports._
-
+---
 ## Setup/Installation for a local environment
 
 $ git clone
@@ -17,7 +17,7 @@ $ npm install
 
 $ npm run start (browser will open to localhost:3000)  
 
-
+---
 ## Adding a new business report
 
 1. Open project in your ide.
@@ -34,12 +34,12 @@ Note: this will automate the creation of the splash page button, the sideNav lin
 
 
 
-
+---
 ## Specs
 
 * _The application allows the user to view reports within a dashboard setting._
 
-
+---
 ## Folder Structure
 
 ```
@@ -111,10 +111,10 @@ Note: this will automate the creation of the splash page button, the sideNav lin
 |-- yarn.lock                               #
 ```
 
-
+___
 ## Support and contact details
 
-_For any questions, comments or contributions please contact Josh Forman (cyborgforman@gmail.com), Kyle Wymer (wymerkd@gmail.com), or Marcus Jensen (marcusjensen1515@gmail.com)_
+_For any questions, comments or contributions please contact Theorem Advertising_
 
 ## Technologies Used
 
