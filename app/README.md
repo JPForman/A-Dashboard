@@ -47,22 +47,21 @@ Note: this will automate the creation of the splash page button, the sideNav lin
 |-- /node_modules/                          # Node Modules
 |
 |-- /public/                                # Public Files
-|   |-- favicon.icon
-|   |-- index.html
-|   |-- manifest.json
-|   |-- robots.txt
-|
+|   |-- index.html                          #
+|   |-- manifest.json                       #  (extemporanious?)
+|   |-- robots.txt                          #  (extemporanious?)
+|   
 |-- /src/                                   # Source files
 |   |-- /components/
 |       |-- /ab-tests/                      #
 |           |-- b2a-one-step.js             #
 |           |-- click-to-call.js            #
 |           |-- get-a-quote.js              #
-|           |-- one-step-form-retest.js     # View allowing an employee to submit anonymous feedback          
-|           |-- submit-to-request-quote.js  # Renders LoggedInHeader/LoggedOutHeader conditionally
-|       |-- /reports/                       # Header if the user is logged in
-|           |-- ReportTemplate.js           # Header if the user is logged out
-|       |-- _RequestAccessToken.js          # View where an employee can login
+|           |-- one-step-form-retest.js     #           
+|           |-- submit-to-request-quote.js  # 
+|       |-- /reports/                       # 
+|           |-- ReportTemplate.js           # Report Template Component
+|       |-- _RequestAccessToken.js          # 
 |       |-- Card.js                         #
 |       |-- Error404.js                     #
 |       |-- GridHeading.js                  #
@@ -71,24 +70,24 @@ Note: this will automate the creation of the splash page button, the sideNav lin
 |       |-- SidebarNav.js                   #
 |       |-- SplashPage.js                   #
 |   |-- /constants/                         #
-|       |-- masterABTestList.js             #
-|       |-- masterBusinessReportList.js     #
-|       |-- reportVariables.js              #
+|       |-- masterABTestList.js             # The array of AB tests with details
+|       |-- masterBusinessReportList.js     # The array of Business Reports with details
+|       |-- reportVariables.js              # (extemporanious?)
 |   |-- /css/            
-|       |-- style.css                       # Compiled styles for production              
+|       |-- style.css                       # 
 |   |-- /data/            
-|       |-- exampleToken.json               # Compiled styles for production              
-|       |-- reportsList.json                # Compiled styles for production              
+|       |-- exampleToken.json               # (extemporanious?)
+|       |-- reportsList.json                # (extemporanious?)
 |   |-- /media/            
-|       |-- AB-Tests.png                    # Compiled styles for production              
-|       |-- aflaclogo.png                   # Compiled styles for production              
-|       |-- Agent.png                       # Compiled styles for production              
-|       |-- B2B.png                         # Compiled styles for production              
-|       |-- B2C.png                         # Compiled styles for production              
-|       |-- bc_duck_search.png              # Compiled styles for production              
-|       |-- navigation_arrow_left.png       # Compiled styles for production              
-|       |-- navigation_arrow_left.svg       # Compiled styles for production              
-|       |-- theoremlogo.png                 # Compiled styles for production              
+|       |-- AB-Tests.png                    # 
+|       |-- aflaclogo.png                   # 
+|       |-- Agent.png                       # 
+|       |-- B2B.png                         # 
+|       |-- B2C.png                         # 
+|       |-- bc_duck_search.png              # 
+|       |-- navigation_arrow_left.png       # 
+|       |-- navigation_arrow_left.svg       # 
+|       |-- theoremlogo.png                 # 
 |   |-- /scss/  
 |       |-- _card.scss                      #  
 |       |-- _error404.scss                  #  
@@ -99,7 +98,7 @@ Note: this will automate the creation of the splash page button, the sideNav lin
 |       |-- _sidenav.scss                   #  
 |       |-- _variables.scss                 #
 |       |-- style.scss                      # Compiled scss files for css conversion
-|   |-- App.js                              # Core Functions + Routing + State
+|   |-- App.js                              # 
 |   |-- index.js                            #
 |   |-- logo.svg                            #
 |   |-- serviceWorker.js                    #
@@ -119,16 +118,16 @@ _For any questions, comments or contributions please contact Josh Forman (cyborg
 
 ## Technologies Used
 
-_React, emailJS, SCSS, CSS_
+_React_
 
-#### By _**Joshua Forman, Marcus Jensen, and Kyle Wymer**_
+#### Contributors include: _**Joshua Forman, Marcus Jensen, Alysia Pretti**_
 
 ### License
 
 *The MIT License
 
 
-Copyright (c) 2020 **_Joshua Forman, Kyle Wymer, Marcus Jensen_**
+Copyright (c) 2020 
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
