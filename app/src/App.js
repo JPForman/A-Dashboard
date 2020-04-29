@@ -19,7 +19,7 @@ import masterABTestList from './constants/masterABTestList';
 import masterBusinessReportsList from './constants/masterBusinessReportsList';
 
 // Styles
-// import './scss/style.scss'
+import './scss/_reportDashboard.scss'
 
 
 function App() {
