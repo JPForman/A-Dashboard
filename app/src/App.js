@@ -90,4 +90,3 @@ export default App;
 //   report = {masterBusinessReportsList.find(({ title }) => title === test.title )} 
 //   />}/>))}
 
-
