@@ -1,3 +1,135 @@
+# _Aflac Dashboard_
+
+
+## Description
+
+(picture of dashboard goes here)
+
+#### _This is an application for viewing analysis reports._
+
+## Setup/Installation for a local environment
+
+$ git clone
+
+_(change directory into app of project )_
+
+$ npm install
+
+$ npm run start (browser will open to localhost:3000)  
+
+
+
+
+## Adding a new business report
+
+1. Open project in your ide.
+
+2. Open app/src/constants/masterBusinessReportsList.js
+
+3. Add new report to the array using the commented out template at the bottom of the file.
+
+Note: this will automate the creation of the splash page button, the sideNav link, the route
+
+
+
+## Setup/Installation Requirements
+
+* _$ git clone https://github.com/wymerkd/theorem-hr-portal.git_
+
+* _$ cd theorem-hr-portal_
+
+* _$ npm install_
+
+* _$ npm run start (browser will open to localhost:3000)_  
+
+* _$ npm run scss (if editing, needed to translate scss)_  
+
+### Test User Account
+
+* email: jim@theorem.com  
+password: test1  
+
+
+## Specs
+
+* _The application allows the user to view personal employee information and create anonymous feedback for hr._
+* _This application also allows admin users the additional ability to view and delete anonymous feedback._
+
+## Folder Structure
+
+```
+/Theorem-HR-Portal/
+|-- /node_modules/                      # Node Modules
+|
+|-- /public/                            # Public Files
+|   |-- favicon.icon
+|   |-- index.html
+|   |-- manifest.json
+|   |-- robots.txt
+|
+|-- /src/                               # Source files
+|   |-- /components/
+|       |-- AdminView.jsx               #
+|       |-- EmployeeDetail.jsx          #
+|       |-- EmployeeHome.jsx            #
+|       |-- FeedbackSubmit.jsx          # View allowing an employee to submit anonymous feedback          
+|       |-- Header.jsx                  # Renders LoggedInHeader/LoggedOutHeader conditionally
+|       |-- LoggedInHeader.jsx          # Header if the user is logged in
+|       |-- LoggedOutHeader.jsx         # Header if the user is logged out
+|       |-- LoginPage.jsx               # View where an employee can login
+|       |-- QuickLinks.jsx              #
+|       |-- TimeOffRequest.jsx          #
+
+|   |-- /css/            
+||      -- style.css                    # Compiled styles for production              
+|   |-- /scss/
+|       |-- _adminView.scss             #
+|       |-- _employeeDetail.scss        #  
+|       |-- _employeeHome.scss          #  
+|       |-- _feedbackSubmit.scss        #                  
+|       |-- _header.scss                #
+|       |-- _loggedInHeader.scss        #  
+|       |-- _loggedOutHeader.scss       #
+|       |-- _loginPage.scss             #
+|       |-- _quickLinks.scss            #
+|       |-- _timeOffRequest.scss        #
+|       |-- _variables.scss             # Theorem color pallette and fonts
+|       |-- style.scss                  # Compiled scss files for css conversion
+|   App.js                              # Core Functions + Routing + State
+|   App.scss                            #
+|   App.test.js                         #
+|   index.js                            #
+|   index.scss                          #
+|   logo.svg                            #
+|   serviceWorker.js                    #
+|   setupTests.js                       #
+|   test_json_object.js                 #
+|   .gitignore                          #
+|   package.json                        #
+|   package-lock.json                   #
+|   README.md                           #
+|   yarn.lock                           #
+```
+
+
+## Support and contact details
+
+_For any questions, comments or contributions please contact Josh Forman (cyborgforman@gmail.com), Kyle Wymer (wymerkd@gmail.com), or Marcus Jensen (marcusjensen1515@gmail.com)_
+
+## Technologies Used
+
+_React, emailJS, SCSS, CSS_
+
+#### By _**Joshua Forman, Marcus Jensen, and Kyle Wymer**_
+
+### License
+
+*The MIT License
+
+
+Copyright (c) 2020 **_Joshua Forman, Kyle Wymer, Marcus Jensen_**
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
